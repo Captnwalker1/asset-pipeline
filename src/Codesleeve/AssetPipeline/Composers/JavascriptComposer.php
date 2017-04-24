@@ -12,7 +12,7 @@ class JavascriptComposer extends BaseComposer implements ComposerInterface
      */
     public function process($paths, $absolutePaths, $attributes)
     {
-        $url = url();
+        $url = appurl();
         $attributesAsText = $this->attributesArrayToText($attributes);
 
         foreach ($paths as $path)

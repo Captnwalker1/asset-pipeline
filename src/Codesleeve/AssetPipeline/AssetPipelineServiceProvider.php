@@ -27,7 +27,7 @@ class AssetPipelineServiceProvider extends ServiceProvider {
 		$this->app['asset'] = $this->app->share(function($app)
 		{
 			$config = $app->config->get('asset-pipeline::config');
-			$config['base_path'] = base_path();
+			$config['base_path'] = install_base_path();
 			$config['environment'] = $app['env'];
 
 			$parser = new SprocketsParser($config);
